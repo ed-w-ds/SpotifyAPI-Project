@@ -1,3 +1,6 @@
+# not currently used in the app
+shows reccomendations based on a genre and songs
+
 import requests
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
