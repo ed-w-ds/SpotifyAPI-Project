@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    TOP TRACKS (INDEX)
+{% endblock %}
+
+{% block main %}
+    <h1 class="display-5 padding-heading" style="color: green">top tracks short-term</h1>
+    <div class="mx-auto mb-5 normal text-center center-table_st col-xs-6">
+        {{ table_st|safe }}
+    </div>
+
+    <div class="mx-auto mb-5 normal text-center center-table_lt col-xs-6">
+        {{ pop_count_value|safe }}
+    </div>
+
+
+{% endblock %}
+
