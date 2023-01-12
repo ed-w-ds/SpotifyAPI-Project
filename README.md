@@ -1,5 +1,5 @@
-# SpotifyAPI Project SPOTIFY TOP TRACKS TRACKER - SPOTIFYreview
-#### Video Demo: https://youtu.be/U_bu61MtLnQ
+# SPOTIFY TOP TRACKS TRACKER - SPOTIFYreview
+#### Video Demo: 
 #### Description:
 SPOTIFYreview is a web application that allows users to view their top tracks over various time periods, including short-term, medium-term, and long-term. It also displays the popularity of each track and the average popularity of the top 50 tracks for the selected time period, as well as the artists of those tracks. This application is implemented using the Flask framework and interacts with the Spotify API to retrieve the requested data.
 
@@ -11,6 +11,4 @@ layout.html includes links to external libraries, such as bootstrap, for styling
 
  index.html, top-tracks-mt.html and top-tracks-lt.html files inherit from the template in the first file. Each file displays an HTML table with the user's top tracks for a specific time period. The tables are generated from Pandas DataFrames and include the track names, artists, and popularity. Each file also displays the average popularity of the top 50 tracks and a button for accessing the user's top tracks in a different time period.
 
- More pages and functions (such as a logout page, a playlist creator, and data visualisation) are currently in development.
-
-Tools and languages used: python, javaScript, HTML, CSS, Flask (see requirements.txt for all the libraries I used)
+Tools and languages used: python, javaScript, HTML, CSS, Flask, Spotify API, Pandas (see requirements.txt for all the libraries I used)
