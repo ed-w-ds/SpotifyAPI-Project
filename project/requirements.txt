@@ -1,6 +1,0 @@
-Flask
-requests
-spotipy
-time
-flask-session
-jinja2
