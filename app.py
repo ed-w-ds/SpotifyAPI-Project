@@ -152,6 +152,7 @@ def top_tracks_lt():
     html_table_lt = df.to_html(classes=["table"])
     html_table_lt = html_table_lt.replace('<td>0</td>', '<td></td>')
     html_table_lt = html_table_lt.replace('<tr style="text-align: right;">', '<tr style="text-align: center;">')
+    html_table_mt += '<tr><td> Average popularity unavailable </td></tr>'
 
     return render_template('top-tracks-lt.html', table_lt=html_table_lt)
 
