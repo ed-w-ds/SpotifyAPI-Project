@@ -1,5 +1,4 @@
 # SPOTIFY TOP TRACKS TRACKER - SPOTIFYreview
-#### Video Demo: 
 #### Description:
 SPOTIFYreview is a web application that allows users to view their top tracks over various time periods, including short-term, medium-term, and long-term. It also displays the popularity of each track and the average popularity of the top 50 tracks for the selected time period, as well as the artists of those tracks. This application is implemented using the Flask framework and interacts with the Spotify API to retrieve the requested data.
 
