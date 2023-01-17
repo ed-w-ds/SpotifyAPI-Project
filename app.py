@@ -17,7 +17,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 app.secret_key = 'SOMETHING-RANDOM'
-app.config['SESSION_COOKIE_NAME'] = 'spotify-login-session'
+app.config['SESSION_COOKIE_NAME'] = 'INSERT COOKIE NAME'
 
 def create_spotify_oauth():
     return SpotifyOAuth(
