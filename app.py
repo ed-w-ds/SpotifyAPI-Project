@@ -1,11 +1,9 @@
 from lib2to3.pgen2.pgen import DFAState
-from flask import Flask, flash, request, redirect, render_template, session, url_for
+from flask import Flask, request, redirect, render_template, session, url_for
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import time
 import pandas as pd
-from flask_session import Session
-import os
 
 #from spotify developer
 CLIENT_ID="INSER CLIENT ID from the spotify developer page, after creating an app"
@@ -50,6 +48,8 @@ def pop_count(top_tracks):
         popularity = track['popularity']
         pop += int(popularity)
         counter += 1
+    if pop == 0:
+        return "No songs found"   
     pop = pop / counter
     return pop
 
