@@ -60,6 +60,7 @@ def login():
     return redirect(authorize_url)
 
 # redirects you to the index page, after authorising
+# will not work unless you add redirect URIs to the application settings
 @app.route('/redirect')
 def redirectPage():
     sp_oauth = create_spotify_oauth()
