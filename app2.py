@@ -1,5 +1,5 @@
 # not currently used in the app
-shows reccomendations based on a genre and songs
+# shows reccomendations based on a genre and songs
 
 import requests
 import spotipy
