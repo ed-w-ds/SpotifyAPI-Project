@@ -5,6 +5,7 @@ from spotipy.oauth2 import SpotifyOAuth
 import time
 import pandas as pd
 from flask_session import Session
+import os
 
 #from spotify developer
 CLIENT_ID="57b04b1761114d7d8343c6b5e37330f9"
@@ -17,8 +18,8 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-app.secret_key = "qwerty123"
-app.config['SESSION_COOKIE_NAME'] = 'my cookie'
+app.secret_key = 'SOMETHING-RANDOM'
+app.config['SESSION_COOKIE_NAME'] = 'spotify-login-session'
 
 def create_spotify_oauth():
     return SpotifyOAuth(
@@ -31,9 +32,10 @@ def create_spotify_oauth():
 #check if there's token data already, and if there's not, then redirect to login page
 def get_token():
     #get token info, if value doesn't exist, return none
-    token_info = session.get(TOKEN_INFO, None)
+    token_info = session.get("token_info", {})
     if not token_info:
         raise "exception"
+        
     now = int(time.time())
     is_expired = token_info['expires_at'] - now < 60
     if (is_expired):
@@ -65,8 +67,10 @@ def redirectPage():
     code = request.args.get('code')
     # storing token info in this session
     token_info = sp_oauth.get_access_token(code)
-    session[TOKEN_INFO] = token_info
+    session["token_info"] = token_info
     return redirect('/index')
+
+
 
 # shows main page - top tracks tracks short term
 @app.route('/index')
@@ -155,5 +159,4 @@ def top_tracks_lt():
     html_table_lt += '<tr><td> Average popularity unavailable </td></tr>'
 
     return render_template('top-tracks-lt.html', table_lt=html_table_lt)
-
 
