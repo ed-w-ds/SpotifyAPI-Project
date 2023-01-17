@@ -8,8 +8,8 @@ from flask_session import Session
 import os
 
 #from spotify developer
-CLIENT_ID="57b04b1761114d7d8343c6b5e37330f9"
-CLIENT_SECRET="fe65c3db369a42538e8694d9698d0c47"
+CLIENT_ID="INSER CLIENT ID from the spotify developer page, after creating an app"
+CLIENT_SECRET="INSERT CLIENT SECRET from the spotify developer page after creating an app"
 TOKEN_INFO = "token_info"
 
 # Configure application
@@ -72,7 +72,7 @@ def redirectPage():
 
 
 
-# shows main page - top tracks tracks short term
+# shows main page - top tracks short term
 @app.route('/index')
 def index():
     try:
